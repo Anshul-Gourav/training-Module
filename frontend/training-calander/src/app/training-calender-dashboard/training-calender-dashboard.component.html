@@ -1,0 +1,32 @@
+ 
+<div *ngFor="let training of trainingObj " >
+
+  <div class="max-w-sm rounded overflow-hidden shadow-lg" >
+    <!-- <img class="w-full" src="/img/card-top.jpg" alt="Sunset in the mountains"> -->
+    <div class="px-6 py-4">
+      <div class="font-bold text-xl mb-2">Trainings </div>
+      <p class="text-gray-700 text-base">
+        Training Name: {{training.trainingName}}
+      </p>
+      <p class="text-gray-700 text-base">
+        Date: {{training.date}} 
+      </p>
+      <p class="text-gray-700 text-base">
+        Trainer Name: {{training.trainerName}} 
+      </p>
+      <p class="text-gray-700 text-base">
+        
+        Category: {{training.category}}
+      </p>
+     
+      <p class="text-gray-700 text-base">
+        
+        Target Audience: {{training.targetAudience}}
+      </p>
+    </div>
+    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+      edit 
+    </button>
+    <button (click)="delete(training._id) "class="bg-red-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">delete</button>
+  </div>
+</div>
